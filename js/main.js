@@ -2,13 +2,20 @@ const subtrair = document.querySelector('#subtrair')
 const somar = document.querySelector('#somar')
 const braco = document.querySelector('#braco')
 
+const controle = document.querySelectorAll('.controle-ajuste')
 
-somar.addEventListener("click", (event) =>{
-    braco.value = parseInt(braco.value) + 1;
+controle.forEach((elemento) => {
+    elemento.addEventListener('click', (evento) =>{
+        manipulaDados(evento.target.textContent)
+    })
 })
 
-subtrair.addEventListener("click", (event) =>{
-        
-    braco.value = parseInt(braco.value) - 1 ;
-    
-})
+
+
+function manipulaDados(operacao) {
+    if (operacao === "-"){
+        braco.value = parseInt(braco.value) - 1 ;
+    }else{
+        braco.value = parseInt(braco.value) + 1;
+    }
+}
