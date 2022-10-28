@@ -7,3 +7,8 @@ somar.addEventListener("click", (event) =>{
     braco.value = parseInt(braco.value) + 1;
 })
 
+subtrair.addEventListener("click", (event) =>{
+        
+    braco.value = parseInt(braco.value) - 1 ;
+    
+})
