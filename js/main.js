@@ -61,7 +61,6 @@ function manipulaDados(operacao, controle) {
 function atualizaEstatisticas(operacao, peca){
     console.log(pecas[peca])
 
-    console.log(operacao)
     estatisticas.forEach((elemento) =>{
 
         if (operacao === '+'){
